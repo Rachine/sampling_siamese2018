@@ -1,12 +1,12 @@
 # Config file to test
 default_params:
-  pathname_experience: 
+  pathname_experience: /home/rachine/sampling_siamese2018/results/prop_sampling_functions/100 
   features:
     class: FeaturesGenerator
     arguments:
       run: never
       files: None
-      output_path: 
+      output_path: /home/rachine/sampling_siamese2018/data/embeddings.h5f
       load_mean_variance_path:
       save_mean_variance_path: False
       vad_file: None
@@ -28,9 +28,9 @@ default_params:
     class: SamplerClusterSiamese
     arguments:
       run: always
-      std_file: 
-      spkid_file:
-      spk_list_file:
+      std_file: /home/rachine/sampling_siamese2018/data/english.wrd.classes 
+      spkid_file: /home/rachine/sampling_siamese2018/data/wav2spk.lst
+      spk_list_file: /home/rachine/sampling_siamese2018/data/all_spk.lst
       batch_size: 8
       max_size_cluster: 20
       ratio_train_dev: 0.7
@@ -48,11 +48,11 @@ default_params:
       hidden_dim: 500
       output_dim: 100
       p_dropout: 0.0
-      batch_norm: False
+      batch_norm: True
       type_init: xavier_uni
       activation_layer: sigmoid
   loss:
-    class: coscos2
+    class: cosmargin
     arguments:
       avg: False
   trainer:
