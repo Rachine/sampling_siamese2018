@@ -9,7 +9,7 @@ default_params:
       output_path: 
       load_mean_variance_path:
       save_mean_variance_path: False
-      vad_folder: None
+      vad_file: None
       n_filters: 40
       method: 'fbanks'
       normalization: False
@@ -29,7 +29,7 @@ default_params:
     arguments:
       run: always
       std_file: 
-      spk_id_file:
+      spkid_file:
       spk_list_file:
       batch_size: 8
       max_size_cluster: 20

@@ -8,7 +8,7 @@ default_params:
       output_path: 
       load_mean_variance_path:
       save_mean_variance_path: False
-      vad_folder: None
+      vad_file: 
       n_filters: 40
       method: 'fbanks'
       normalization: False
