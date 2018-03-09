@@ -1,6 +1,6 @@
 # Config file to test
 default_params:
-  pathname_experience: /scratch2/rriad/projects/interspeech_paper_sampling2018/study_prop_speaker/buckeye-100
+  pathname_experience: /scratch2/rriad/projects/interspeech_paper_sampling2018/study_prop_speaker/buckeye-10
   features:
     class: FeaturesGenerator
     arguments:
@@ -29,9 +29,9 @@ default_params:
     class: SamplerClusterSiamese
     arguments:
       run: always
-      std_file: ../data/english.wrd.classes
-      spkid_file: ../data/wav2spk.lst
-      spk_list_file: ../data/all_spk.lst
+      std_file: /scratch2/rriad/projects/interspeech_paper_sampling2018/data/english.wrd-0.1.classes
+      spkid_file: /scratch2/rriad/back_rriad/zerospeech2015/wav2spk.lst
+      spk_list_file: /scratch2/rriad/back_rriad/zerospeech2015/all_spk.lst
       batch_size: 8
       max_size_cluster: 20
       ratio_train_dev: 0.7

@@ -1,6 +1,6 @@
 # Config file to test
 default_params:
-  pathname_experience: /scratch2/rriad/projects/interspeech_paper_sampling2018/study_prop_speaker/buckeye-100
+  pathname_experience: /scratch2/rriad/projects/interspeech_paper_sampling2018/study_sampling_functions/buckeye-50
   features:
     class: FeaturesGenerator
     arguments:
@@ -29,15 +29,15 @@ default_params:
     class: SamplerClusterSiamese
     arguments:
       run: always
-      std_file: ../data/english.wrd.classes
-      spkid_file: ../data/wav2spk.lst
-      spk_list_file: ../data/all_spk.lst
+      std_file: /scratch2/rriad/projects/interspeech_paper_sampling2018/data/english.wrd-0.5.classes
+      spkid_file: /scratch2/rriad/back_rriad/zerospeech2015/wav2spk.lst
+      spk_list_file: /scratch2/rriad/back_rriad/zerospeech2015/all_spk.lst
       batch_size: 8
       max_size_cluster: 20
       ratio_train_dev: 0.7
+      ratio_same_diff_spk: 0.5
       ratio_same_diff_type: 0.5
       spk_sampling_mode: f2
-      type_sampling_mode: '1'
       num_total_sampled_pairs: 2000000
       sample_batches: False
       seed: 0
@@ -74,5 +74,4 @@ default_params:
 grid_params:
     sampler:
         arguments:
-            ratio_same_diff_spk: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-
+          type_sampling_mode: ['log','fcube','f','f2','1']
