@@ -1,5 +1,7 @@
 data/wavs/
-# Byte-compiled / optimized / DLL files
+data/*h5f
+data/*h5
+#Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
