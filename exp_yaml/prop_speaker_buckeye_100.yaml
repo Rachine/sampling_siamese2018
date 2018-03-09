@@ -4,15 +4,16 @@ default_params:
     class: FeaturesGenerator
     arguments:
       run: never
-      files: None
+      files: /scratch2/cdancette/projects/dataset/buckeye_all_wavs/
       output_path: 
       load_mean_variance_path:
-      save_mean_variance_path: False
-      vad_file: 
+      save_mean_variance_path: 
+      vad_file: /scratch2/cdancette/projects/dataset/Zerospeech2015/english_sample_vad.txt 
       n_filters: 40
       method: 'fbanks'
-      normalization: False
-      norm_per_file: False
+      normalization: True
+      norm_per_file: True
+      norm_per_channel: False
       stack: True
       nframes: 7
       deltas: False
@@ -32,11 +33,11 @@ default_params:
       spk_list_file: /scratch2/rriad/back_rriad/zerospeech2015/all_spk.lst
       batch_size: 8
       max_size_cluster: 20
-      type_sampling_mode: log
+      type_sampling_mode: '1'
       ratio_train_dev: 0.7
       ratio_same_diff_type: 0.5
       spk_sampling_mode: f2
-      num_total_sampled_pairs: 500000
+      num_total_sampled_pairs: 2000000
       sample_batches: False
       seed: 0
   model:
@@ -51,7 +52,7 @@ default_params:
       type_init: xavier_uni
       activation_layer: sigmoid
   loss:
-    class: coscos2
+    class: cosmargin
     arguments:
       avg: False
   trainer:
