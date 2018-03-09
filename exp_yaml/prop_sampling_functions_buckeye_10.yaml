@@ -1,15 +1,15 @@
 # Config file to test
 default_params:
-  pathname_experience: /scratch2/rriad/projects/interspeech_paper_sampling2018/study_sampling_functions/buckeye-10
+  pathname_experience: ../results/study_sampling_functions/buckeye-10
   features:
     class: FeaturesGenerator
     arguments:
       run: never
-      files: /scratch2/cdancette/projects/dataset/buckeye_all_wavs/
-      output_path: /scratch2/rriad/projects/interspeech_paper_sampling2018/study_sampling_functions/buckeye-10/features.h5
+      files: None
+      output_path: ../data/features.h5
       load_mean_variance_path:
-      save_mean_variance_path: 
-      vad_file: /scratch2/cdancette/projects/dataset/Zerospeech2015/english_sample_vad.txt 
+      save_mean_variance_path:
+      vad_file: ../data/english_sample_vad.txt
       n_filters: 40
       method: 'fbanks'
       normalization: True
