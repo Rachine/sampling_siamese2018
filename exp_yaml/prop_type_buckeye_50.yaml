@@ -1,0 +1,77 @@
+# Config file to test
+default_params:
+  pathname_experience: ../results/study_prop_type/buckeye-50
+  features:
+    class: FeaturesGenerator
+    arguments:
+      run: never
+      files: None
+      output_path: ../data/features.h5
+      load_mean_variance_path:
+      save_mean_variance_path:
+      vad_file: ../data/english_sample_vad.txt
+      n_filters: 40
+      method: 'fbanks'
+      normalization: True
+      norm_per_file: True
+      norm_per_channel: False
+      stack: True
+      nframes: 7
+      deltas: False
+      deltasdeltas: False
+  dataloader:
+      class: OriginalDataLoader
+      arguments:
+        seed : 0
+        num_max_minibatches : 10000
+        batch_size : 8
+  sampler:
+    class: SamplerClusterSiamese
+    arguments:
+      run: always
+      std_file: ../data/english.wrd-0.5.classes
+      spkid_file: ../data/wav2spk.lst
+      spk_list_file: ../data/all_spk.lst
+      batch_size: 8
+      max_size_cluster: 20
+      ratio_train_dev: 0.7
+      ratio_same_diff_spk: 0.5
+      spk_sampling_mode: f2
+      type_sampling_mode: '1'
+      num_total_sampled_pairs: 2000000
+      sample_batches: False
+      seed: 0
+  model:
+    class: SiameseNetwork
+    arguments:
+      input_dim: 280
+      num_hidden_layers: 2
+      hidden_dim: 500
+      output_dim: 100
+      p_dropout: 0.0
+      batch_norm: True
+      type_init: xavier_uni
+      activation_layer: sigmoid
+  loss:
+    class: cosmargin
+    arguments:
+      avg: False
+  trainer:
+    class: TrainerSiamese
+    arguments:
+      num_epochs: 200
+      patience: 30
+      lr: 0.0001
+      momentum:
+      seed: 0
+      cuda: True
+      optimizer_type: adam
+  embedder:
+    class: EmbedderSiamese
+    arguments:
+      cuda: True
+
+grid_params:
+    sampler:
+        arguments:
+            ratio_same_diff_type: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
