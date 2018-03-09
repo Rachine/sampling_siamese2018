@@ -6,7 +6,7 @@ default_params:
     arguments:
       run: never
       files: None
-      output_path: ../data/embeddings.h5f
+      output_path: ../data/features.h5
       load_mean_variance_path:
       save_mean_variance_path: False
       vad_file: None

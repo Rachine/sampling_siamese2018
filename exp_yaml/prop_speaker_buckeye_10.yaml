@@ -6,7 +6,7 @@ default_params:
     arguments:
       run: never
       files: None
-      output_path: ../data/study_sampling_functions/buckeye-10/features.h5
+      output_path: ../data/features.h5
       load_mean_variance_path:
       save_mean_variance_path:
       vad_file: ../results/english_sample_vad.txt
