@@ -1,6 +1,6 @@
 # Config file to test
 default_params:
-  pathname_experience: ../results/prop_sampling_functions/100
+  pathname_experience: ../results/study_sampling_functions/buckeye-100
   features:
     class: FeaturesGenerator
     arguments:
