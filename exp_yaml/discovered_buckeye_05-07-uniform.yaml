@@ -1,6 +1,6 @@
 # Config file to test
 default_params:
-  pathname_experience: ../results/discovered/05-05-uniform
+  pathname_experience: ../results/discovered/05-07-uniform
   features:
     class: FeaturesGenerator
     arguments:
