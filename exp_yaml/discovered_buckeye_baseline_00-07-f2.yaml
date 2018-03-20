@@ -1,6 +1,6 @@
 # Config file to test
 default_params:
-  pathname_experience: ../results/discovered/00-07-f2-baseline
+  pathname_experience: ../results/discovered-baseline/00-07-f2
   features:
     class: FeaturesGenerator
     arguments:
