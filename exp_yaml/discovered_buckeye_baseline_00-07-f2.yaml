@@ -1,6 +1,6 @@
 # Config file to test
 default_params:
-  pathname_experience: ../results/discovered/00-07-uniform-baseline
+  pathname_experience: ../results/discovered/00-07-f2-baseline
   features:
     class: FeaturesGenerator
     arguments:
@@ -38,7 +38,7 @@ default_params:
       ratio_same_diff_spk: 0.0
       ratio_same_diff_type: 0.7
       spk_sampling_mode: f2
-      type_sampling_mode: '1'
+      type_sampling_mode: f2
       num_total_sampled_pairs: 2000000
       sample_batches: False
       seed: 0
