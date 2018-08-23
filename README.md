@@ -29,26 +29,52 @@ If you find this code useful in your research, please, consider citing our paper
 
 ### Requirements
 
-To run the code, you need python3 installed and install the [ABnet3](https://github.com/bootphon/abnet3)
-In order to obtain the features used here, other dependencies are needed.
-For that, see the corresponding [section](#features).
+To run the code, you need python3 and pytorch installed and install the  [ABnet3](https://github.com/bootphon/abnet3) package and its dependencies. 
 
 ### Method
 
-This repo contains the yaml files for the method described in the paper.
+This repo contains the yaml files for the method described in the paper. For instance, to replicate the 100%-buckeye variations of sampling function which is in the figure 1 of the paper:
+
+```Bash
+python Path_to_abnet3/abnet3/gridsearch.py Path_to_sampling_siamese2018/exp_yaml/prop_sampling_functions_buckeye_100.yaml
+```
 
 ### Evaluation
+
+Evaluation tools can be found on the [challenge website](http://sapience.dec.ens.fr/bootphon/2015/page_4.html).
+
+For the **weakly-supervised** part, the evaluation is with the sample set of speakers. So features have to be generated for these two extra speakers of the buckeye.
+
+For the **unsupervised** part, the evaluation is the usual track 1 evaluation of the challenge.
 
 ### Datasets
 
 Datasets with the raw .wav files can be found on the [challenge website](http://sapience.dec.ens.fr/bootphon/2015/page_4.html).
 
 
-
 ### Features
 
-We provide the features files for t
-If you want to run this code on new data, you will need to process the data as follows.
+In order to generate the features, in the **FeaturesGenerator** of the yaml exp file:
+- fill the good path for the dir of .wav files
+- fill the good path for vad file
+- fill the output path
+- change the parameter run from **never** to **once**
+
+If you want to run this code on new data, you will need to process the data with the 'features.py' of **ABnet3**.
 If you need more details on this don't hesitate to email the first author of the paper.
 
-#### **Filterbanks**
+We also provide the top down words used in the paper for the weakly and unsupervised settings in the folder **data**.
+
+### References
+
+.. [1] Riad, R., Dancette, C., Karadayi, J., Zeghidour, N., Schatz, T., Dupoux, E.
+       *Sampling strategies in Siamese Networks for unsupervised speech representation learning.*
+       In Nineteenth Annual Conference of the International Speech Communication Association
+
+.. [2] Thiolliere, R., Dunbar, E., Synnaeve, G., Versteegh, M., & Dupoux, E.
+       *A hybrid dynamic time warping-deep neural network architecture for unsupervised acoustic modeling.*
+       In Sixteenth Annual Conference of the International Speech Communication Association
+
+.. [3] Zeghidour, N., Synnaeve, G., Usunier, N. & Dupoux, E.
+       *Joint Learning of Speaker and Phonetic Similarities with Siamese Networks.*
+       In: INTERSPEECH-2016, (pp 1295-1299)
