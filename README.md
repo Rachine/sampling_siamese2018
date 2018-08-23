@@ -9,17 +9,17 @@ Recent studies have investigated siamese network architectures for learning inva
 
 Our code is released under the GNU GENERAL PUBLIC LICENSE  (refer to the LICENSE file for details).
 
-### Cite
+### Cite our [paper](https://arxiv.org/abs/1804.11297)
 
 If you find this code useful in your research, please, consider citing our paper:
-
-> @InProceedings{Riad18sampling,
->    author      = "Rachid Riad and Corentin Dancette and Julien Karadayi and Neil Zeghidour and Thomas Schatz and Emmanuel Dupoux",
->    title       = "Sampling strategies in Siamese Networks for unsupervised speech representation learning",
->    booktitle   = "Proc. Interspeech 2018",
->    year        = "2018"
->}
-
+```
+ @inproceedings{riad18sampling,
+    author      = "Rachid Riad and Corentin Dancette and Julien Karadayi and Neil Zeghidour and Thomas Schatz and Emmanuel Dupoux",
+    title       = "Sampling strategies in Siamese Networks for unsupervised speech representation learning",
+    booktitle   = "Proc. Interspeech 2018",
+    year        = "2018"
+}
+```
 ### Contents
 
   1. [Requirements](#requirements)
@@ -29,7 +29,7 @@ If you find this code useful in your research, please, consider citing our paper
 
 ### Requirements
 
-To run the code, you need python3 and pytorch installed and install the  [ABnet3](https://github.com/bootphon/abnet3) package and its dependencies. 
+To run the code, you need python3 and pytorch installed and install the  [ABnet3](https://github.com/bootphon/abnet3) package and its dependencies.
 
 ### Method
 
