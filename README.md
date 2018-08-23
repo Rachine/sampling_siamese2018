@@ -13,6 +13,12 @@ Our code is released under the GNU GENERAL PUBLIC LICENSE  (refer to the LICENSE
 
 If you find this code useful in your research, please, consider citing our paper:
 
+> @InProceedings{Riad18sampling,
+>    author      = "Rachid Riad and Corentin Dancette and Julien Karadayi and Neil Zeghidour and Thomas Schatz and Emmanuel Dupoux",
+>    title       = "Sampling strategies in Siamese Networks for unsupervised speech representation learning",
+>    booktitle   = "Proc. Interspeech 2018",
+>    year        = "2018"
+>}
 
 ### Contents
 
@@ -34,6 +40,10 @@ This repo contains the yaml files for the method described in the paper.
 ### Evaluation
 
 ### Datasets
+
+Datasets with the raw .wav files can be found on the [challenge website](http://sapience.dec.ens.fr/bootphon/2015/page_4.html).
+
+
 
 ### Features
 
