@@ -9,7 +9,7 @@ Recent studies have investigated siamese network architectures for learning inva
 
 Our code is released under the GNU GENERAL PUBLIC LICENSE  (refer to the LICENSE file for details).
 
-### Cite our [paper](https://arxiv.org/abs/1804.11297)
+### Our arxiv [paper](https://arxiv.org/abs/1804.11297)
 
 If you find this code useful in your research, please, consider citing our paper:
 ```
